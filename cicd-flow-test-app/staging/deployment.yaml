@@ -6,19 +6,19 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels: { app: cicd-flow-test-app }
+    matchLabels: {app: cicd-flow-test-app}
   template:
     metadata:
-      labels: { app: cicd-flow-test-app }
+      labels: {app: cicd-flow-test-app}
     spec:
       containers:
         - name: cicd-flow-test-app
-          image: registry.k8s.io/pause:3.9 # placeholder - patched by release.yaml's open-release-pr Task
+          image: ghcr.io/jfillman/cicd-flow-test-app:0.0.0-e038b1d66aff # placeholder - patched by release.yaml's open-release-pr Task
           ports:
             - containerPort: 3000
           readinessProbe:
-            httpGet: { path: /healthz, port: 3000 }
+            httpGet: {path: /healthz, port: 3000}
             initialDelaySeconds: 3
           livenessProbe:
-            httpGet: { path: /healthz, port: 3000 }
+            httpGet: {path: /healthz, port: 3000}
             initialDelaySeconds: 3
