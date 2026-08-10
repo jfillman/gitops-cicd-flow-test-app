@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cicd-flow-test-app-staging
+  namespace: argocd
+  labels:
+    platform.io/app: cicd-flow-test-app
+    platform.io/env: staging
+    platform.io/subcomponent: argocd
+    platform.io/dora-track: "true"
+  annotations:
+    platform.io/dora-pending: "true"
+    platform.io/dora-flow-start-time: "2026-08-10T22:34:03.356980295Z"
+    platform.io/dora-app-namespace: "app-cicd-flow-test-app-cicd"
+    platform.io/dora-app: "cicd-flow-test-app"
+    platform.io/dora-git-url: "https://github.com/jfillman/cicd-flow-test-app"
+    platform.io/dora-git-revision: "ef3c1be18b495da1593ad64d4e13b3e8bb86818c"
+    platform.io/dora-config-json-b64: "eyJhcGlWZXJzaW9uIjogInBsYXRmb3JtL3YxIiwgImtpbmQiOiAiUGlwZWxpbmVDb25maWciLCAiYnVpbGQiOiB7ImFnZW50IjogIm5vZGVqcy0yMCIsICJzY3JpcHQiOiAiLi9idWlsZC5zaCIsICJkb2NrZXJmaWxlIjogIi4vRG9ja2VyZmlsZSIsICJ1bml0VGVzdCI6IHsiZW5hYmxlZCI6IHRydWUsICJjb21tYW5kIjogIi4vdGVzdC5zaCJ9fSwgInRlc3QiOiB7ImVuYWJsZWQiOiB0cnVlLCAic3VpdGUiOiAiaW50ZWdyYXRpb24ifSwgImRlcGxveSI6IHsibG93ZXJFbnZpcm9ubWVudHMiOiBbImRldiJdLCAidXBwZXJFbnZpcm9ubWVudHMiOiBbeyJuYW1lIjogInN0YWdpbmciLCAiY2x1c3RlciI6ICJraW5kLXByb2QifV0sICJzdHJhdGVneSI6ICJkZXBsb3ltZW50In0sICJnb3Zlcm5hbmNlIjogeyJzYXN0IjogdHJ1ZSwgImltYWdlU2NhbiI6IHRydWUsICJwb2xpY3lDaGVjayI6IHRydWUsICJzYm9tIjogdHJ1ZSwgImFsbG93ZWRDb21taXRTaWduZXJzIjogWyI3MjY4MzM3K2pmaWxsbWFuQHVzZXJzLm5vcmVwbHkuZ2l0aHViLmNvbSJdfSwgInNlY3JldHMiOiBbeyJuYW1lIjogInNsYWNrLXdlYmhvb2stdXJsIn1dLCAibm90aWZpY2F0aW9ucyI6IHsic2xhY2siOiB7ImVuYWJsZWQiOiB0cnVlLCAiY2hhbm5lbCI6ICIjYWxsLWlkcC1sYWIifX0sICJwaXBlbGluZXMiOiB7ImNpIjogeyJ0cmlnZ2VyIjogeyJzb3VyY2UiOiAiZ2l0IiwgImV2ZW50IjogInB1c2giLCAiYnJhbmNoIjogIm1haW4ifSwgInN0ZXBzIjogW3sic3RhZ2UiOiAiYnVpbGQifSwgeyJzdGFnZSI6ICJ0ZXN0IiwgImVudiI6ICJkZXYiLCAic3VpdGUiOiAidW5pdCJ9LCB7InN0YWdlIjogInRlc3QiLCAiZW52IjogImRldiIsICJzdWl0ZSI6ICJpbnRlZ3JhdGlvbiJ9LCB7InN0YWdlIjogImRlcGxveSIsICJlbnYiOiAiZGV2In1dfSwgInByLWNoZWNrIjogeyJ0cmlnZ2VyIjogeyJzb3VyY2UiOiAiZ2l0IiwgImV2ZW50IjogInB1bGxfcmVxdWVzdCIsICJicmFuY2giOiAibWFpbiJ9LCAic3RlcHMiOiBbeyJzdGFnZSI6ICJidWlsZCJ9XX0sICJyZWxlYXNlLW9uLXRhZyI6IHsidHJpZ2dlciI6IHsic291cmNlIjogImdpdCIsICJldmVudCI6ICJ0YWciLCAidGFnUGF0dGVybiI6ICJ2WzAtOV0rXC5bMC05XStcLlswLTldKyJ9LCAic3RlcHMiOiBbeyJzdGFnZSI6ICJyZWxlYXNlIiwgImVudiI6ICJzdGFnaW5nIn1dfSwgInJlbGVhc2UtdGhlbi10ZXN0MTc4NjQwMTIzMSI6IHsidHJpZ2dlciI6IHsic291cmNlIjogImdpdCIsICJldmVudCI6ICJwdXNoIiwgImJyYW5jaCI6ICJtYWluIiwgImZpbGVQYXRoUGF0dGVybiI6IFsiUkVMRUFTRV9USEVOX1RFU1RfVFJJR0dFUiJdfSwgInN0ZXBzIjogW3sic3RhZ2UiOiAiYnVpbGQifSwgeyJzdGFnZSI6ICJkZXBsb3kiLCAiZW52IjogImRldiJ9LCB7InN0YWdlIjogInJlbGVhc2UiLCAiZW52IjogInN0YWdpbmcifSwgeyJzdGFnZSI6ICJ0ZXN0IiwgImVudiI6ICJzdGFnaW5nIn1dfSwgImJyYW5jaC1jcmVhdGVkLXRlc3QiOiB7InRyaWdnZXIiOiB7InNvdXJjZSI6ICJnaXQiLCAiZXZlbnQiOiAiYnJhbmNoLmNyZWF0ZWQiLCAiYnJhbmNoIjogInByZXZpZXcvKiJ9LCAic3RlcHMiOiBbeyJzdGFnZSI6ICJidWlsZCJ9XX19fQ=="
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jfillman/gitops-cicd-flow-test-app.git
+    targetRevision: main
+    path: cicd-flow-test-app/staging
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app-cicd-flow-test-app-staging
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
