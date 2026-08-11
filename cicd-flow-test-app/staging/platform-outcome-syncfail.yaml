@@ -1,0 +1,33 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: platform-outcome-syncfail
+  annotations:
+    argocd.argoproj.io/hook: SyncFail
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+  labels:
+    platform.io/app: cicd-flow-test-app
+    platform.io/subcomponent: outcome-hook
+spec:
+  backoffLimit: 2
+  activeDeadlineSeconds: 60
+  template:
+    spec:
+      serviceAccountName: platform-outcome-hook
+      restartPolicy: Never
+      containers:
+        - name: notify
+          image: ghcr.io/jfillman/platform-cicd-toolbox:latest
+          command: ["/opt/platform/lib/argocd-outcome-hook.sh"]
+          env:
+            - name: POD_NAMESPACE
+              valueFrom: { fieldRef: { fieldPath: metadata.namespace } }
+            - { name: RELAY_URL, value: "http://10.89.0.2:30880/outcome/kind-prod" }
+            - { name: APP_NAMESPACE, value: "app-cicd-flow-test-app-cicd" }
+            - { name: APP_NAME, value: "cicd-flow-test-app" }
+            - { name: ENV, value: "staging" }
+            - { name: PHASE, value: "Failed" }
+            - { name: GIT_URL, value: "https://github.com/jfillman/cicd-flow-test-app" }
+            - { name: GIT_REVISION, value: "ef3c1be18b495da1593ad64d4e13b3e8bb86818c" }
+            - { name: FLOW_START_TIME, value: "2026-08-11T02:42:39.673682872Z" }
+            - { name: CONFIG_JSON_B64, value: "eyJub3RpZmljYXRpb25zIjp7InNsYWNrIjp7ImVuYWJsZWQiOmZhbHNlfX0sIm1hcmtlciI6Imhvb2stdmVyaWZpY2F0aW9uLXBvc3RzeW5jIn0=" }
