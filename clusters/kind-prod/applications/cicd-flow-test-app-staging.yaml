@@ -8,14 +8,6 @@ metadata:
     platform.io/env: staging
     platform.io/subcomponent: argocd
     platform.io/dora-track: "true"
-  annotations:
-    platform.io/dora-pending: "true"
-    platform.io/dora-flow-start-time: "2026-08-10T22:58:08.530842707Z"
-    platform.io/dora-app-namespace: "app-cicd-flow-test-app-cicd"
-    platform.io/dora-app: "cicd-flow-test-app"
-    platform.io/dora-git-url: "https://github.com/jfillman/cicd-flow-test-app"
-    platform.io/dora-git-revision: "ef3c1be18b495da1593ad64d4e13b3e8bb86818c"
-    platform.io/dora-config-json-b64: "eyJub3RpZmljYXRpb25zIjp7InNsYWNrIjp7ImVuYWJsZWQiOmZhbHNlfX19"
 spec:
   project: default
   source:

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cicd-flow-test-app-release-meta
+  labels:
+    platform.io/app: cicd-flow-test-app
+    platform.io/subcomponent: release-meta
+data:
+  appNamespace: "app-cicd-flow-test-app-cicd"
+  flowStartTime: "2026-08-11T01:09:32.271183069Z"
+  gitUrl: "https://github.com/jfillman/cicd-flow-test-app"
+  gitRevision: "ef3c1be18b495da1593ad64d4e13b3e8bb86818c"
+  configJsonB64: "eyJub3RpZmljYXRpb25zIjp7InNsYWNrIjp7ImVuYWJsZWQiOmZhbHNlfX0sIm1hcmtlciI6InJhY2VmaXgtdmVyaWZpY2F0aW9uIn0="
