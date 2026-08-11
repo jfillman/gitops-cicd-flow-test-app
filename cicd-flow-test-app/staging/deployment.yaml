@@ -4,10 +4,10 @@ metadata:
   name: cicd-flow-test-app
   namespace: app-cicd-flow-test-app-staging
   annotations:
-    platform.io/dora-git-revision: ef3c1be18b495da1593ad64d4e13b3e8bb86818c
-    platform.io/dora-image: ghcr.io/jfillman/cicd-flow-test-app:1.0.5-ef3c1be-annotest1786423195
-    platform.io/dora-flow-start-time: "2026-08-11T04:40:16.110500449Z"
-    platform.io/dora-gitops-pr-url: https://github.com/jfillman/gitops-cicd-flow-test-app/pull/158
+    platform.io/dora-git-revision: 52f0626e7958b9e0413920d8a0cadd8be39221c3
+    platform.io/dora-image: ghcr.io/jfillman/cicd-flow-test-app:1.0.8-52f0626
+    platform.io/dora-flow-start-time: "2026-08-11T17:19:48.793220074Z"
+    platform.io/dora-gitops-pr-url: https://github.com/jfillman/gitops-cicd-flow-test-app/pull/162
 spec:
   replicas: 1
   selector:
