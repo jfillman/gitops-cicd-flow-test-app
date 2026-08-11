@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: platform-outcome-hook
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: platform-outcome-hook
+rules:
+  - apiGroups: [""]
+    resources: ["secrets"]
+    resourceNames: ["platform-outcome-relay-token"]
+    verbs: ["get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: platform-outcome-hook
+roleRef: { apiGroup: rbac.authorization.k8s.io, kind: Role, name: platform-outcome-hook }
+subjects:
+  - kind: ServiceAccount
+    name: platform-outcome-hook
