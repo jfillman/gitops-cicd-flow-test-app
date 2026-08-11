@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hook-timing-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: hook-timing-test }
+  template:
+    metadata:
+      labels: { app: hook-timing-test }
+    spec:
+      containers:
+        - name: app
+          image: busybox:1.36
+          command: ["sh", "-c", "sleep 3600"]
+          readinessProbe:
+            exec:
+              command: ["sh", "-c", "test -f /tmp/ready"]
+            initialDelaySeconds: 5
+            periodSeconds: 3
+          lifecycle:
+            postStart:
+              exec:
+                # Deliberately slow to become Ready - 25s after container start -
+                # so health convergence is clearly separated in time from "manifest
+                # applied", making the two easy to tell apart in the timestamps below.
+                command: ["sh", "-c", "sleep 25 && touch /tmp/ready"]
