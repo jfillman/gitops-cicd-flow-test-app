@@ -29,5 +29,6 @@ spec:
             - { name: PHASE, value: "Failed" }
             - { name: GIT_URL, value: "https://github.com/jfillman/cicd-flow-test-app" }
             - { name: GIT_REVISION, value: "ef3c1be18b495da1593ad64d4e13b3e8bb86818c" }
-            - { name: FLOW_START_TIME, value: "2026-08-11T02:42:39.673682872Z" }
-            - { name: CONFIG_JSON_B64, value: "eyJub3RpZmljYXRpb25zIjp7InNsYWNrIjp7ImVuYWJsZWQiOmZhbHNlfX0sIm1hcmtlciI6Imhvb2stdmVyaWZpY2F0aW9uLXBvc3RzeW5jIn0=" }
+            - { name: FLOW_START_TIME, value: "2026-08-11T04:40:16.110500449Z" }
+            - { name: PR_URL, value: "https://github.com/jfillman/gitops-cicd-flow-test-app/pull/158" }
+            - { name: CONFIG_JSON_B64, value: "eyJub3RpZmljYXRpb25zIjp7InNsYWNrIjp7ImVuYWJsZWQiOnRydWUsImNoYW5uZWwiOiIjYWxsLWlkcC1sYWIifX0sIm1hcmtlciI6ImFubm90YXRpb25zLWFuZC1wci1saW5rLXZlcmlmaWNhdGlvbiJ9" }
