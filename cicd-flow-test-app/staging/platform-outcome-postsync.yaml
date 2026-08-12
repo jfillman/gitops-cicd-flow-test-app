@@ -28,7 +28,7 @@ spec:
             - { name: ENV, value: "staging" }
             - { name: PHASE, value: "Succeeded" }
             - { name: GIT_URL, value: "https://github.com/jfillman/cicd-flow-test-app" }
-            - { name: GIT_REVISION, value: "ef3c1be18b495da1593ad64d4e13b3e8bb86818c" }
-            - { name: FLOW_START_TIME, value: "2026-08-11T04:40:16.110500449Z" }
-            - { name: PR_URL, value: "https://github.com/jfillman/gitops-cicd-flow-test-app/pull/158" }
-            - { name: CONFIG_JSON_B64, value: "eyJub3RpZmljYXRpb25zIjp7InNsYWNrIjp7ImVuYWJsZWQiOnRydWUsImNoYW5uZWwiOiIjYWxsLWlkcC1sYWIifX0sIm1hcmtlciI6ImFubm90YXRpb25zLWFuZC1wci1saW5rLXZlcmlmaWNhdGlvbiJ9" }
+            - { name: GIT_REVISION, value: "5ce0448e1545cd7aa85eb11a7ebb35da9f58ae89" }
+            - { name: FLOW_START_TIME, value: "2026-08-12T08:02:50.974369898Z" }
+            - { name: PR_URL, value: "https://github.com/jfillman/gitops-cicd-flow-test-app/pull/167" }
+            - { name: CONFIG_JSON_B64, value: "e30=" }
