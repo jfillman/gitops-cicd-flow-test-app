@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: cicd-flow-test-app
-          image: ghcr.io/jfillman/cicd-flow-test-app:1.0.15-9a68170 # placeholder - patched by release.yaml's open-release-pr Task
+          image: ghcr.io/jfillman/cicd-flow-test-app:1.0.16-92569c8 # placeholder - patched by release.yaml's open-release-pr Task
           ports:
             - containerPort: 3000
           readinessProbe:
