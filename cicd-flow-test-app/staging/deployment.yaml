@@ -4,10 +4,10 @@ metadata:
   name: cicd-flow-test-app
   namespace: app-cicd-flow-test-app-staging
   annotations:
-    platform.io/dora-git-revision: 60e31efc6bbccc13e0141c8182201b027259e405
-    platform.io/dora-image: ghcr.io/jfillman/cicd-flow-test-app:1.0.17-60e31ef
-    platform.io/dora-flow-start-time: "2026-08-12T19:39:26.068429800Z"
-    platform.io/dora-gitops-pr-url: https://github.com/jfillman/gitops-cicd-flow-test-app/pull/175
+    platform.io/dora-git-revision: 3f844e6cbb069259d92a388160e628be507d755c
+    platform.io/dora-image: ghcr.io/jfillman/cicd-flow-test-app:1.0.18-3f844e6
+    platform.io/dora-flow-start-time: "2026-08-12T21:22:52.289574245Z"
+    platform.io/dora-gitops-pr-url: https://github.com/jfillman/gitops-cicd-flow-test-app/pull/176
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: cicd-flow-test-app
-          image: ghcr.io/jfillman/cicd-flow-test-app:1.0.17-60e31ef # placeholder - patched by release.yaml's open-release-pr Task
+          image: ghcr.io/jfillman/cicd-flow-test-app:1.0.18-3f844e6 # placeholder - patched by release.yaml's open-release-pr Task
           ports:
             - containerPort: 3000
           readinessProbe:
